@@ -18,8 +18,6 @@
        var arr1=[25,99,77,66,44,88,99,66,77,66,55];
         var result=reverse(arr1);
        document.write(result);
-       var name='Rupesh';
-       document.write(name[0]);
     </script>
 </body>
 </html>
