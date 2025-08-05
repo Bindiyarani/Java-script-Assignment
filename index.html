@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image changing</title>
+    <style>
+        .main{
+            width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://images.pexels.com/photos/3255245/pexels-photo-3255245.jpeg" alt="" width="750px" height="500px" id="img1">
+        <img src="https://images.pexels.com/photos/13537947/pexels-photo-13537947.jpeg" onmouseover="changeImage(this)" alt="" width="23%" id="img2">
+        <img src="https://images.pexels.com/photos/3104527/pexels-photo-3104527.jpeg" onmouseover="changeImage(this)" alt="" width="23%" id="img3">
+        <img src="https://images.pexels.com/photos/6858664/pexels-photo-6858664.jpeg" onmouseover="changeImage(this)" alt="" width="23%" id="img4">
+        <img src="https://images.pexels.com/photos/3098619/pexels-photo-3098619.jpeg" onmouseover="changeImage(this)" alt="" width="23%" id="img5">
+    </div>
+</body>
+<script>
+    let img1=document.querySelector("#img1")
+    let img2=img1;
+    function changeImage(currentImage){
+        let currentimg=currentImage.src;
+        img1.src=currentimg;
+        
+    }
+</script>
+</html>
