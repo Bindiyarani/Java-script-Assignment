@@ -15,6 +15,10 @@
             border: 1px solid gray;
             margin: 2px;
         }
+        #img{
+            width: 150px;
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -30,16 +34,35 @@
         <div class="box" id="rd3">
 
         </div>
+        <input type="text" value="Rupesh is back" id="name">
+        <img src="https://images.pexels.com/photos/6858664/pexels-photo-6858664.jpeg" alt="" id="img" onclick="change()">
     </div>
 </body>
 <script>
+    
     var output=document.getElementById('rd2')
     document.getElementById('rd3').innerText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, commodi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, minus."
 
     var tags=document.getElementsByTagName('h2');
     console.log(tags[1].innerText);
 
-    var qry=document.querySelector("box")
-    console.log(qry[0])
+    var qry=document.querySelector("#rd2")
+    console.log(qry.innerText)
+
+    var qryall=document.querySelectorAll(".box")
+    console.log(qryall[1].innerText)
+
+    var vlu=document.getElementById('name')
+    console.log(vlu.value)
+
+    var cngimg=document.getElementById('img')
+    console.log(cngimg.src)
+    
+    function change(){
+        document.getElementById('img').src='https://images.pexels.com/photos/3098619/pexels-photo-3098619.jpeg'
+        document.getElementById('img').style.height='300px';
+        document.getElementById('img').style.width='300px';
+    }
+    
 </script>
 </html>
