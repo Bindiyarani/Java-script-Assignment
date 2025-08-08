@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class list</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            margin: 50px auto;
+            width: 1200px;
+
+        }
+        .q_1{
+            border: 1px solid gray;
+            margin-top: 25px;
+        }
+        .q{
+            border: 1px solid gray;
+            padding: 10px;
+           background: rgb(20, 20, 20);
+           color: white;
+           font-size: 18px;
+           font-weight: bold;
+           cursor: pointer;
+           
+        }
+        .a{
+            padding: 15px;
+            
+        }
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="q_1">
+            <div class="q" onclick="addclass()">
+                What are the different data types present in javascript?
+            </div>
+            <div class="a" id="ans1">
+                To know the type of a JavaScript variable, we can use the typeof operator.
+            </div>
+        </div>
+        <div class="q_1">
+            <div class="q" onclick="removecls()">
+                Explain Hoisting in javascript.
+            </div>
+            <div class="a d-none" id="ans2">
+                Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
+            </div>
+        </div>
+        <div class="q_1">
+            <div class="q" onclick="toggle()">
+                Explain Implicit Type Coercion in javascript.
+            </div>
+            <div class="a d-none" id="ans3">
+                Implicit type coercion in javascript is the automatic conversion of value from one data type to another. It takes place when the operands of an expression are of different data types
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function addclass(){
+        document.getElementById('ans1').classList.add('d-none')
+    }
+    function removecls(){
+        document.getElementById('ans2').classList.remove('d-none')
+    }
+    function toggle(){
+        document.getElementById('ans3').classList.toggle('d-none')
+    }
+</script>
+</html>
